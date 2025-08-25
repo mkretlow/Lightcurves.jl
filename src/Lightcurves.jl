@@ -22,7 +22,7 @@ using Printf
 using ProgressBars
 using Statistics
 using SQLite
-#using VSOP87
+using VSOP87
 
 const version = v"0.1.0"
 
