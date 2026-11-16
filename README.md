@@ -46,6 +46,9 @@ example in `examples/` is also a page of the manual):
 
 ## Documentation, tests
 
+The manual is at **<https://mkretlow.github.io/Lightcurves.jl/dev/>** (built by GitHub Actions on every push to
+`main`). Build it locally:
+
 ```bash
 julia --project=. -e 'using Pkg; Pkg.test()'
 julia --project=docs -e 'using Pkg; Pkg.instantiate()'; julia --project=docs docs/make.jl   # → docs/build/index.html

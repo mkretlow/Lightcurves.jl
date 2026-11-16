@@ -31,4 +31,4 @@ makedocs(; sitename="Lightcurves.jl", modules=[Lightcurves], authors="Mike Kretl
                 "API" => "api.md", "References" => "references.md"],
          plugins=[bib], checkdocs=:exports, warnonly=[:missing_docs])
 
-# deploydocs(; repo="github.com/mkretlow/Lightcurves.jl.git", devbranch="main")   # when the repository is public
+deploydocs(; repo="github.com/mkretlow/Lightcurves.jl.git", devbranch="main", push_preview=false)
