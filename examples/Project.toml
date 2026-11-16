@@ -1,0 +1,9 @@
+[deps]
+Lightcurves = "3385b6b1-bfdd-410e-80e4-48c808aea59d"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+
+[sources]
+Lightcurves = {path = ".."}
+
+[compat]
+Plots = "1"

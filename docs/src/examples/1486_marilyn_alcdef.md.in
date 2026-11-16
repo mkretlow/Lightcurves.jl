@@ -1,0 +1,26 @@
+# (1486) Marilyn from ALCDEF light curves
+
+Script: [`examples/1486_marilyn_alcdef.jl`](https://github.com/mkretlow/Lightcurves.jl/blob/main/examples/1486_marilyn_alcdef.jl).
+
+Five dense light curves of 2013 are downloaded from alcdef.org ([`fetch_alcdef`](@ref)) and compared with the LCDB entry
+([`lcdb_entry`](@ref)). The times are corrected for light time with the geocentric distance from JPL Horizons
+([`observing_geometry`](@ref), [`light_time_correct`](@ref)). FALC with one zero point per session finds the rotation
+period, the GLS periodogram half of it (double-peaked light curve); [`fit_period`](@ref) refines the period with its
+error, and the result is plotted in the style of the Minor Planet Bulletin (`plot(fit; residuals=true)`).
+
+!!! note "Output"
+    The script is not run when the manual is built; output and figures of its last run:
+
+```text
+{{OUTPUT}}
+```
+
+![ALCDEF sessions](../assets/figures/1486_marilyn_alcdef/sessions_raw.png)
+
+![Periodograms](../assets/figures/1486_marilyn_alcdef/periodograms.png)
+
+![Phased light curve (MPB style)](../assets/figures/1486_marilyn_alcdef/phased_lightcurve_mpb.png)
+
+![Two cycles](../assets/figures/1486_marilyn_alcdef/phased_lightcurve_2cycles.png)
+
+![Split halves](../assets/figures/1486_marilyn_alcdef/split_halves.png)

@@ -1,21 +1,41 @@
 name = "Lightcurves"
 uuid = "3385b6b1-bfdd-410e-80e4-48c808aea59d"
+version = "0.1.0-DEV"
 authors = ["Mike Kretlow <mike@kretlow.de>"]
-version = "0.1.0"
 
 [deps]
-ADTK = "6c08364c-cf43-46fb-b78e-00afa5fee584"
-AstroFun = "a1680281-0159-4a0f-88e5-264a37452960"
-CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
-DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
+CodecZlib = "944b1d66-785c-5afd-91f1-9de20f533193"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
-LombScargle = "fc60dff9-86e7-5f2f-a8a0-edeadbb75bd9"
-LsqFit = "2fda8390-95c7-5789-9bda-21331edee243"
-NOVAS = "0910322d-4c7f-4050-830b-958ccfca0d3c"
-Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
-ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
-SQLite = "0aa819cd-b072-5ff4-a722-6bc24af294d9"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
-VSOP87 = "96062bd6-7aaa-4016-af0e-b09ea08f9cbc"
+
+[weakdeps]
+FITSIO = "525bcba6-941b-5504-bd06-fd0dc1a4d2eb"
+
+[extensions]
+LightcurvesFITSIOExt = "FITSIO"
+
+[compat]
+CodecZlib = "0.7"
+Dates = "1"
+Downloads = "1"
+FITSIO = "0.16, 0.17"
+JSON = "0.21, 1"
+LinearAlgebra = "1"
+Printf = "1"
+Random = "1"
+RecipesBase = "1"
+Statistics = "1"
+julia = "1.10"
+
+[extras]
+FITSIO = "525bcba6-941b-5504-bd06-fd0dc1a4d2eb"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "FITSIO"]
