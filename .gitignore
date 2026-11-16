@@ -45,3 +45,8 @@ docs/src/assets/figures/
 # Local databases in data/ (ALCDEF archive, LCDB release; downloaded with fetch_*_archive)
 data/*.zip
 data/lc_*_pub.txt
+
+# Local reference material, third-party sources and links (not part of the package)
+deps/
+other/
+data/astele.sdb
